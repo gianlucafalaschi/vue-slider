@@ -73,10 +73,14 @@ createApp({
     },
     methods: {
         showNextImage: function() {
-            this.activeImage++;
+            if(this.activeImage < this.slides.length - 1){
+                this.activeImage++; 
+            }
         },
         showPreviousImage: function() {
-            this.activeImage--;
+            if(this.activeImage > 0){
+                this.activeImage--;
+            }
         }
     },
 }).mount('#app');
