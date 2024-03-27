@@ -75,11 +75,15 @@ createApp({
         showNextImage: function() {
             if(this.activeImage < this.slides.length - 1){
                 this.activeImage++; 
+            } else {
+                this.activeImage = 0;
             }
         },
         showPreviousImage: function() {
             if(this.activeImage > 0){
                 this.activeImage--;
+            } else {
+                this.activeImage = this.slides.length - 1;
             }
         }
     },
