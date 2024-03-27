@@ -29,8 +29,8 @@
                 <div class="thumbs">
                     <div class="prev" @click="showPreviousImage"></div>
                     <div class="next" @click="showNextImage"></div>
-                    <div class="thumb active">
-                        <img v-for="singleThumbnails, index in slides" :src="slides[index].image" alt="Svezia" />
+                    <div v-for="element, index in slides" class="thumb" :class="{'active': index == activeImage}">
+                        <img :src="element.image" alt="Svezia" />
                     </div>
                     <!-- <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />
